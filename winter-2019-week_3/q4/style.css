@@ -1,0 +1,26 @@
+#my_element {
+    background-image: url(bg-image.jpg);
+    background-color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* The following list shows the folder structure of your project:
+
+www/
+css/
+style.css
+img/
+bg-image.jpg
+index.html
+Imagine you are writing CSS into the file /css/style.css.
+
+Complete the following CSS code to give the element an image background. Use a relative path to the image.
+
+The background color (for the case that the image does not load) will be #ffffff.
+The background image will be the bg-image.jpg located in the img folder.
+The size of the image will be so that it coveres the element no matter how big it is.
+The image should be fixed to the viewport, not scroll with the page's contents.
+The image should be positioned at the center of the element. */

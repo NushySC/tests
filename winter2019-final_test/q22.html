@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 23</title>
+
+    <!-- include jQuery here -->
+
+</head>
+
+<body>
+
+    <button id="clickable">CLICK ME!</button>
+
+    <script>
+        document.getElementById("clickable").addEventListener("mouseover", function () {
+            console.log('Over')
+        });
+        
+        document.getElementById("clickable").addEventListener("mouseleave", function () {
+            console.log('Out')
+        });
+    </script>
+
+</body>
+
+</html>

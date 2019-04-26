@@ -1,0 +1,76 @@
+<!-- Declare a function named highlight.
+
+The function will accept 1 argument: an element object.
+
+The function will add the class highlighted to the element that was passed as argument.
+
+Then using JavaScript write code to:
+
+attach an event listener onto all the elements with class square, listening for the event mouseover
+when that event happens, call the function highlight with the target of the event (that particular square) as it's argument
+(If everything goes well, you should see your path highlighted as you move the mouse over the squares.) -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 7</title>
+
+    <style>
+        #board {
+            display: flex;
+            flex-flow: row wrap;
+            width: 20em;
+            height: 20em;
+        }
+        #board .square {
+            box-sizing: border-box;
+            width: 2em;
+            height: 2em;
+            border: 1px solid #ffffff;
+            background-color: #e7e7e7;
+            transition: background-color 0.5s ease;
+        }
+        #board .square.highlighted {
+            background-color: rgb(64, 196, 206);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="board">
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+        <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    </div>
+    
+    <script>
+        // your code here...
+
+        const highlight = (element) => {
+            element.classList.add('highlighted');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let square = document.querySelectorAll('.square');
+            for (let s of square) {
+            s.addEventListener('mouseover', () => {
+            highlight(s);
+        });
+        }
+        });
+
+    </script>
+
+</body>
+</html>

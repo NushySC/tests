@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 9</title>
+
+    <style>
+        #content>span:nth-child(1) {
+            background-color: red;
+        }
+
+        #content>span.colored {
+            background-color: blue;
+        }
+
+        #content>div>div>span {
+            background-color: orange;
+        }
+
+        body>span {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content">
+        <span>RED</span>
+        <span class="colored">BLUE</span>
+        <div class="inside">
+            <span>no color for this one</span>
+            <div>
+                <span>ORANGE</span>
+            </div>
+        </div>
+    </div>
+    <span class="colored">GREEN</span>
+
+</body>
+
+</html>

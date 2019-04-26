@@ -1,0 +1,66 @@
+<!-- Write Javascript code only to:
+
+find the nav element in the header
+hide it from view
+find the burger button in the header
+make it appear
+Make sure to leave the nav outside of the header element unchanged. -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 4</title>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">BRAND</div>
+
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <button class="burger" style="display: none">&#9776;</button>
+    </header>
+
+    <main>
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </main>
+
+    <script>
+        // javascript code here ...
+
+        const menu = document.querySelector('.menu');
+
+        const hide = () => {
+            menu.style.display = 'none';
+        }
+
+        hide();
+
+        const burger = document.querySelector('.burger');
+
+        const show = () => {
+            burger.style.display = 'block';
+        }
+
+        show();
+
+
+
+
+    </script>
+</body>
+
+</html>

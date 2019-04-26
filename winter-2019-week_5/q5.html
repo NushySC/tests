@@ -1,0 +1,40 @@
+<!-- There is a button. Clicking the button moves the box horizontally.
+
+Without changing the current code and with JavaScript only:
+
+write code so that when the button is clicked, the box moves also vertically (so together with what it already does it will move diagonally)
+Make sure to only write JavaScript between the <script> tags and not change anything else.
+
+Note: the code within the onclick attribute is ugly just to keep it short. In your solution you can be more eloquent and write pretty code. -->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 5</title>
+
+</head>
+
+<body>
+
+    <button id="move" onclick="document.getElementById('box').style.left = (parseInt(document.getElementById('box').style.left) + 20) + 'px';">MOVE!</button>
+
+    <div id="box" style="position: relative; left: 0; top: 0; background: red; height: 2em; width: 2em"></div>
+
+
+    <script>
+        // your code here...
+
+        const moveDown = () => {
+            document.getElementById("box").style.top = (parseInt(document.getElementById('box').style.top) + 20) +
+                'px';
+        }
+
+        document.getElementById("move").addEventListener('click', moveDown);
+    </script>
+</body>
+
+</html>

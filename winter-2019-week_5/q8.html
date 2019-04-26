@@ -1,0 +1,58 @@
+<!-- In the document there is a <select> field that is empty.
+
+    You are provided an array with 12 items: names of months.
+    
+    Write JavaScript code to:
+    
+    loop through the array of months
+    for each item add an <option> element into the <select> field that will have the name of the month as inner HTML and the number of the month (1-12) as the option's value attribute
+    Result sample:
+    
+    <select name="month" id="month">
+        <option value="1">January</option>
+        <option value="2">February</option>
+    </select>
+    In the end there should be 12 options in the select field. -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 8</title>
+
+</head>
+
+<body>
+
+    <label for="month">Choose a month:</label><br>
+    <select name="month" id="month"></select>
+
+    <script>
+        var months = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December'
+        ];
+
+        // your code here ...
+
+        for (i = 0; i < months.length; i++) {
+            document.getElementById('month').innerHTML += "<option value=" + (i+1) + ">" + months[i] + "</option>"
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!-- In the document there are 2 lists:
+
+a list of To Do tasks (7 items)
+a list of tasks already done (empty)
+A task that has been already done is denoted by having the class done. So in the code, tasks 1, 2, 4 and 5 have been done.
+
+Using JavaScript only find the list items of the tasks that have been done (i.e. have class done) and move them from the first list into the second. So after this operation the first list should have only 3 items and the second list should have 4 items. -->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 6</title>
+
+</head>
+
+<body>
+
+    <h2>Tasks</h2>
+    <ol id="todo_tasks">
+        <li class="task done">Wake up</li>
+        <li class="task done">Get up</li>
+        <li class="task">Have breakfast</li>
+        <li class="task done">Go to class</li>
+        <li class="task done">Start test</li>
+        <li class="task">Finish test</li>
+        <li class="task">Profit!</li>
+    </ol>
+
+    <h2>Done tasks</h2>
+    <ol id="done_tasks">
+    </ol>
+
+    <script>
+        // your code here ...
+
+        const moveToDone = () => {
+            // using Array.from() just to keep with getElementsByClassName
+            // this could have been also done more easily using querySelectorAll
+            var done_tasks = Array.from(document.getElementsByClassName('done'));
+            for (let element of done_tasks) {
+                document.getElementById('done_tasks').appendChild(element);
+            }
+        }
+        moveToDone();
+
+    </script>
+
+</body>
+
+</html>

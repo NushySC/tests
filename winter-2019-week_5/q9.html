@@ -1,0 +1,57 @@
+<!-- In the document there is a <select> field with two options:
+
+    czech
+    foreign
+    Also there are 2 <form> elements with id attributes:
+    
+    czech
+    foreign
+    Write JavaScript code to:
+    
+    attach an event listener onto the <select> field waiting for the change event
+    when the event happens, find out which option is currently selected
+    use the value of the selected option to show the appropriate <form> and hide the other one
+    Example: when the selected option is czech, the <form> with id czech will be shown and the one with id foreign will be hidden.
+    
+    Note: the listener will wait for the change event. So before the value actually changes, both forms will be shown. For the purpose of this question, this behaviour is ok. If you want to make it better and reflect the selected option even before a change happens, you might consider wrapping some of your code into a function and calling it once. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 9</title>
+
+</head>
+<body>
+
+    <label for="nationality">Select nationality:</label><br>
+    <select id="nationality">
+        <option value="czech" selected>Czech</option>
+        <option value="foreign">Foreign</option>
+    </select>
+
+    <div id="forms">
+
+        <form action="" id="czech">
+            <label for="op">Zadejte číslo občanského průkazu:</label><br>
+            <input type="text" id="op" name="op" value=""><br>
+            <br>
+            <input type="submit" value="Odeslat">
+        </form>
+
+        <form action="" id="foreign">
+            <label for="passport">Enter the number of your passport:</label><br>
+            <input type="text" id="passport" name="passport" value=""><br>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+
+    </div>
+
+    <script>
+        // your code here ...
+    </script>
+    
+</body>
+</html>
